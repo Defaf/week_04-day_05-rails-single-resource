@@ -1,0 +1,18 @@
+<h1>It is My book</h1>
+
+<p> 
+    <%=link_to "back",books_path %>
+</p>
+<h1>
+    <%= @book.title %>
+</h1>
+
+<p>
+    <%= @book.author %>
+</p>
+
+<p><%= link_to "Edit", edit_book_path(@book) %></p>
+
+<p>
+    <%= link_to'Destroy this book!', book_path(@book), method: :delete %>
+</p>
