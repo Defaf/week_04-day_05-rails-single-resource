@@ -1,18 +1,15 @@
-<h1>It is My book</h1>
+<h1>Book Page</h1>
 
-<p> 
-    <%=link_to "back",books_path %>
-</p>
-<h1>
-    <%= @book.title %>
-</h1>
+<table>
+    <tr>
+        <th>Book Name:</th>
+        <td> <%= @book.title %> </td>
+    </tr>
 
-<p>
-    <%= @book.author %>
-</p>
+    <tr>
+        <td><%=link_to "Back to Main Page",books_path %> |
+        <%= link_to'Edit', edit_book_path(@book) %> |
+        <%= link_to'Delete this author!', book_path(@book), method: :delete %></td>
+    </tr>
 
-<p><%= link_to "Edit", edit_book_path(@book) %></p>
-
-<p>
-    <%= link_to'Destroy this book!', book_path(@book), method: :delete %>
-</p>
+</table>
