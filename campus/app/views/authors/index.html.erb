@@ -1,0 +1,22 @@
+<h1>Hello my awesome authors</h1>
+
+
+<h3><%= link_to "Home", controller="welcome#index" %> | <%= link_to "New Author", new_author_path %> </h3>
+<br>
+<table>
+    <tr>
+        <th> Author no.</th>
+        <th> Author Name </th>
+    </tr>
+
+<% @authors.each do |author|%>
+
+    <tr>
+        <td><%= author.id %></td>
+        <td><%= author.firstName + " " +author.lastName %></td>
+        <td><%= link_to "Show", author_path(author) %> | </td>
+        <td><%= link_to'Delete', author_path(author), method: :delete %></td>
+    </tr>
+   
+    <% end %>
+</table> 

@@ -1,0 +1,26 @@
+<h1> New Author to our family </h1>
+
+<%= form_for @author, url: {action: "create"} do |f| %>
+<table>
+    <tr>
+        <th>First Name: </th>
+        <td><%= f.text_field :firstName ,required: true %></td>
+    </tr>
+
+    <tr>
+        <th>Last Name: </th>
+        <td><%= f.text_field :lastName, required: true %></td>
+    </tr>
+
+    <tr>
+        <th>Location: </th>
+        <td><%= f.text_field :location %></td>
+    </tr>
+
+    <tr>
+         <td><%= f.submit "New Author" %> | </td>
+         <td><%=link_to "Back to Main Page",authors_path %></td>
+    <tr>
+    <% end %>
+</table>
+    

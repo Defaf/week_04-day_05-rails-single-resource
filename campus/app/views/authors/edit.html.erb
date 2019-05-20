@@ -1,0 +1,25 @@
+<h1> Update author </h1>
+
+<%= form_for @author, url: {action: "update"} do |f| %>
+    <table>
+    <tr>
+        <th>First Name: </th>
+        <td><%= f.text_field :firstName, required: true %></td>
+    </tr>
+
+    <tr>
+        <th>Last Name: </th>
+        <td><%= f.text_field :lastName, required: true %></td>
+    </tr>
+
+    <tr>
+        <th>Location: </th>
+        <td><%= f.text_field :location %></td>
+    </tr>
+
+    <tr>
+         <td><%= f.submit "Update Author" %> | </td>
+         <td><%=link_to "Back to Main Page",author_path %></td>
+    <tr>
+    <% end %>
+</table>
