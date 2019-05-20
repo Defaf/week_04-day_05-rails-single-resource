@@ -1,11 +1,21 @@
-<h1>Hello Rails</h1>
+<h1>Hello to book community</h1>
 
-<%= link_to "Create a book", new_book_path %>
+<h2><%= link_to "Add new book", new_book_path %></h2>
+<br>
+<table>
+    <tr>
+        <th> no.</th>
+        <th> Book Name </th>
+    </tr>
 
 <% @books.each do |book|%>
-    <h3>
-        <%= link_to book.title, book_path(book) %> 
-    </h3>
+    <tr>
+        <td><%= book.id %></td>
+        <td><%= book.title  %></td>
+        <td><%= link_to "Show", book_path(book) %> | </td>
+        <td><%= link_to'Delete', book_path(book), method: :delete %></td>
 
-    
-<% end %>
+    <tr>
+
+    <% end %>
+</table> 
