@@ -1,8 +1,15 @@
-<h1> Add your Book</h1>
+<h1>New Book to our Library</h1>
 
 <%= form_for @book, url: {action: "create"} do |f| %>
-    <%= f.text_field :title %>
-    <%= f.text_field :author %>
-    <%= f.submit "Save" %>
+    <table>
+    <tr>
+        <th>Book Name: </th>
+        <td><%= f.text_field :title, required: true %></td>
+    </tr>
     
-<% end %>
+    <tr>
+         <td><%= f.submit "New Book" %> | </td>
+         <td><%=link_to "Back to Main Page",books_path %></td>
+    <tr>
+    <% end %>
+</table>
