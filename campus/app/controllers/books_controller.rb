@@ -21,8 +21,7 @@ class BooksController < ApplicationController
 
     def create 
         @book = Book.create (book_params)
-        # redirect_to books_path 
-        redirect_to books_path(@book)
+        redirect_to book_path(@book)
     end 
 
     def edit
@@ -32,11 +31,11 @@ class BooksController < ApplicationController
     def update
         @book = Book.find(params[:id])
         @book.update(book_params)
-        redirect_to books_path(@book)
+        redirect_to book_path(@book)
     end
   
     def book_params
-        params.require(:book).permit(:title ,:author)
+        params.require(:book).permit(:title)
     end
 end
     
