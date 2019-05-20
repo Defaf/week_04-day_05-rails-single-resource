@@ -6,6 +6,16 @@
         <th>Book Name: </th>
         <td><%= f.text_field :title, required: true %></td>
     </tr>
+
+    <tr>
+        <th>Original Language:</th>
+        <td> <%= f.text_field  :originalLanguage %> </td>
+    </tr>
+
+    <tr>
+        <th>Book Date:</th>
+        <td> <%= f.date_field :printDate %> </td>
+    </tr>
     
     <tr>
          <td><%= f.submit "New Book" %> | </td>

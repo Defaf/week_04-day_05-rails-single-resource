@@ -7,6 +7,16 @@
     </tr>
 
     <tr>
+        <th>Original Language:</th>
+        <td> <%= @book.originalLanguage %> </td>
+    </tr>
+
+    <tr>
+        <th>Book Date:</th>
+        <td> <%= @book.printDate %> </td>
+    </tr>
+
+    <tr>
         <td><%=link_to "Back to Main Page",books_path %> |
         <%= link_to'Edit', edit_book_path(@book) %> |
         <%= link_to'Delete this author!', book_path(@book), method: :delete %></td>
