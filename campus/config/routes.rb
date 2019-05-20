@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
+  resources :authors do 
+    resources :books
+  end 
+  root 'welcome#index'
 
+=begin
   get "/books", to: "books#index", as: "books" # book_path =/books
   get '/books/new', to: "books#new", as: "new_book"# book_path(book)=/books/new
   
@@ -24,8 +29,7 @@ Rails.application.routes.draw do
 
   get '/authors/:id/edit', to: "authors#edit",as: "edit_author"
   patch '/authors/:id', to: "authors#update"
-
-  root 'welcome#index'
+=end 
 
 end
 

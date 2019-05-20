@@ -1,6 +1,6 @@
 <h1>Hello to book community</h1>
 
-<h2><%= link_to "Add new book", new_book_path %></h2>
+<h2><%= link_to "Add new book", new_author_book_path(@author) %></h2>
 <br>
 <table>
     <tr>
@@ -14,8 +14,8 @@
         <td><%= book.id %></td>
         <td><%= book.title  %></td>
         <td><%= book.originalLanguage  %></td>
-        <td><%= link_to "Show", book_path(book) %> | </td>
-        <td><%= link_to'Delete', book_path(book), method: :delete %></td>
+        <td><%= link_to "Show", author_book_path(@author,book) %> | </td>
+        <td><%= link_to'Delete', author_book_path(@author, book), method: :delete %></td>
 
     <tr>
 

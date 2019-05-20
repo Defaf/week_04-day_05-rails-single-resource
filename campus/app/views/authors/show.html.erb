@@ -32,6 +32,10 @@
     </tr>
 
     <tr>
+        <td> <%= link_to 'View Books', author_books_path(@author) %></td>
+    </tr>
+
+    <tr>
         <td><%=link_to "Back to Main Page",authors_path %> |
         <%= link_to'Edit', edit_author_path(@author) %> |
         <%= link_to'Delete this author!', author_path(@author), method: :delete %></td>

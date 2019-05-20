@@ -17,9 +17,9 @@
     </tr>
 
     <tr>
-        <td><%=link_to "Back to Main Page",books_path %> |
-        <%= link_to'Edit', edit_book_path(@book) %> |
-        <%= link_to'Delete this author!', book_path(@book), method: :delete %></td>
+        <td><%=link_to "Back to Main Page",author_books_path(@author) %> |
+        <%= link_to'Edit', edit_author_book_path(@author,@book) %> |
+        <%= link_to'Delete this author!', author_book_path(@author,@book), method: :delete %></td>
     </tr>
 
 </table>

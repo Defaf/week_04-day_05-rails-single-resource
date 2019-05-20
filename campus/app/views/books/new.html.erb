@@ -19,7 +19,7 @@
     
     <tr>
          <td><%= f.submit "New Book" %> | </td>
-         <td><%=link_to "Back to Main Page",books_path %></td>
+         <td><%=link_to "Back to Main Page",author_books_path(@author) %></td>
     <tr>
     <% end %>
 </table>
