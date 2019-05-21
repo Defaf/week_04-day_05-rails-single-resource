@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @house.name %>
+</p>
+
+<p>
+  <strong>Animal:</strong>
+  <%= @house.animal %>
+</p>
+
+<p>
+  <strong>Diagnosis:</strong>
+  <%= @house.diagnosis %>
+</p>
+
+<p>
+  <strong>Slogan:</strong>
+  <%= @house.slogan %>
+</p>
+
+<%= link_to 'Edit', edit_house_path(@house) %> |
+<%= link_to 'Back', houses_path %>
