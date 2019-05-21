@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fisrt name:</strong>
+  <%= @wizard.fisrt_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @wizard.last_name %>
+</p>
+
+<%= link_to 'Edit', edit_wizard_path(@wizard) %> |
+<%= link_to 'Back', wizards_path %>

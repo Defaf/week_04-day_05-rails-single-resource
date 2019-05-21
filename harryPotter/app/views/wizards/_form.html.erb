@@ -1,0 +1,27 @@
+<%= form_with(model: wizard, local: true) do |form| %>
+  <% if wizard.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(wizard.errors.count, "error") %> prohibited this wizard from being saved:</h2>
+
+      <ul>
+      <% wizard.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :fisrt_name %>
+    <%= form.text_field :fisrt_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
