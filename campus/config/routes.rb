@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   resources :authors do 
     resources :books
   end 
-  root 'welcome#index'
+  root 'authors#index'
+
+  resources :doctors
+  resources :patients
 
 =begin
   get "/books", to: "books#index", as: "books" # book_path =/books
