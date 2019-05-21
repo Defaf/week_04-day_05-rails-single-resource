@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_21_113416) do
+ActiveRecord::Schema.define(version: 2019_05_21_121008) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,9 @@ ActiveRecord::Schema.define(version: 2019_05_21_113416) do
     t.string "last_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "house_id"
+    t.index ["house_id"], name: "index_wizards_on_house_id"
   end
 
+  add_foreign_key "wizards", "houses"
 end

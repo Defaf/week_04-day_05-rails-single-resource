@@ -16,9 +16,9 @@
       <tr>
         <td><%= wizard.fisrt_name %></td>
         <td><%= wizard.last_name %></td>
-        <td><%= link_to 'Show', wizard %></td>
-        <td><%= link_to 'Edit', edit_wizard_path(wizard) %></td>
-        <td><%= link_to 'Destroy', wizard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', house_wizard_path(@house,wizard) %></td>
+        <td><%= link_to 'Edit', edit_house_wizard_path(@house, wizard) %></td>
+        <td><%= link_to 'Destroy', house_wizard_path(@house,wizard), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Wizard', new_wizard_path %>
+<%= link_to 'New Wizard', new_house_wizard_path(@house) %>

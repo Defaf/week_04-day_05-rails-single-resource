@@ -14,6 +14,6 @@
   <strong>Slogan:</strong>
   <%= @house.slogan %>
 </p>
-
+<%= link_to 'View wizards', house_wizards_path(@house) %>|
 <%= link_to 'Edit', edit_house_path(@house) %> |
 <%= link_to 'Back', houses_path %>
